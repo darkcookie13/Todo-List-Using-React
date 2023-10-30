@@ -1,0 +1,149 @@
+/* this is the css code */
+
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=Playfair+Display:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600;1,700&family=Playfair+Display:ital@0;1&display=swap");
+
+/* Global styles for all elements */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+}
+
+/* Styles for the entire page body */
+body {
+  background-image: url("background.png"); /* Background image for the entire body */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Styles for the main todo app container */
+.todo-app {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 520px;
+  min-height: 600px;
+  background: linear-gradient(
+    45deg,
+    #810eb6,
+    transparent
+  ); /* Gradient background */
+  text-align: center;
+  margin: 20px auto;
+  border-radius: 10px;
+  padding-bottom: 32px;
+}
+
+/* Styles for the main heading */
+h1 {
+  margin: 32px 0;
+  color: #fff; /* Text color */
+  font-size: 24px;
+  font-family: "Dancing Script", cursive; /* Font style */
+}
+
+/* Styles for completed todos */
+.complete {
+  text-decoration: line-through; /* Line-through text decoration for completed todos */
+  opacity: 0.4; /* Reduced opacity for completed todos */
+}
+
+/* Styles for the todo form */
+.todo-form {
+  margin-bottom: 32px;
+}
+
+/* Styles for the input field within the todo form */
+.todo-input {
+  padding: 14px 32px 14px 16px;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid #590c8d; /* Border style */
+  outline: none;
+  width: 320px;
+  background: transparent;
+  color: #fff; /* Text color */
+}
+
+.todo-input::placeholder {
+  color: #e2e2e2; /* Placeholder text color */
+}
+
+/* Styles for the todo button within the todo form */
+.todo-button {
+  padding: 16px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+  background: linear-gradient(45deg, rgb(222 14 230) 0%, rgb(49 14 110) 100%);
+  color: #fff; /* Text color */
+  text-transform: capitalize; /* Capitalize text */
+}
+
+/* Styles for the input field and button in edit mode */
+.todo-input .edit {
+  border: 2px solid #149fff; /* Border style for edit mode */
+}
+
+.todo-button .edit {
+  background: linear-gradient(
+    90deg,
+    rgba(20, 159, 255, 1) 0%,
+    rgba(17, 122, 255, 1) 100%
+  );
+  padding: 16px 22px; /* Padding for the edit button */
+}
+
+/* Styles for the container of individual todos */
+.todo-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+/* Styles for individual todo rows */
+.todo-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px auto;
+  color: #fff; /* Text color */
+  background: linear-gradient(90deg, rgb(28 199 178) 0%, rgb(88 58 46) 100%);
+  padding: 16px;
+  border-radius: 5px; /* Rounded corners */
+  width: 90%;
+}
+
+/* Alternate background colors for different todo rows */
+.todo-row:nth-child(4n + 1) {
+  background: linear-gradient(90deg, rgb(89 52 164) 0%, rgb(128 18 62) 100%);
+}
+
+.todo-row:nth-child(4n + 2) {
+  background: linear-gradient(45deg, rgb(232 65 223) 0%, rgb(15 121 38) 100%);
+}
+
+.todo-row:nth-child(4n + 3) {
+  background: linear-gradient(90deg, rgb(201 152 14) 0%, rgb(102 17 255) 100%);
+}
+
+/* Styles for icons within the todo rows */
+.icons {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.delete-icon {
+  margin-right: 5px;
+  color: #d91414; /* Color for the delete icon */
+}
+
+.edit-icon {
+  color: #2b0c86; /* Color for the edit icon */
+}
